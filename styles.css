@@ -1,20 +1,18 @@
-/* Custom Styles */
 
-/* Define @font-face for MicroExtendFLF */
-@font-face {
+  @font-face {
     font-family: 'MicroExtendFLF';
     src: url('fonts/MicroExtendFLF.ttf') format('truetype');
-    /* Add other font formats (e.g., woff, woff2) for better browser compatibility */
   }
 
   .navbar-nav .nav-link:hover {
     color: yellow !important; /* Change color to yellow on hover */
   }
   
-  /* Apply MicroExtendFLF font to body */
+
   body {
     font-family: 'MicroExtendFLF', sans-serif;
-    background-image: url('images/pexels-bich-tran-669996.jpg');
+    /* background-image: url('images/pexels-bich-tran-669996.jpg'); */
+    background-color: black;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,14 +21,25 @@
   
   header {
     background-color: black;
+    height: 100vh; 
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
   }
-  
 
-/* Adjust text size and word wrapping */
-header .bg-dark {
-  word-wrap: break-word; /* Allow long words to break onto the next line */
-}
-  
+  /* .bg-img{
+    background-color: red;
+    display: block;
+  }
+
+  .bg-img2{
+    background-color: blue;
+  } */
+
+  header .bg-dark {
+    word-wrap: break-word; /* Allow long words to break onto the next line */
+  }
+    
   #projects .card {
     transition: transform 0.3s ease;
   }
@@ -71,51 +80,72 @@ header .bg-dark {
     color: yellow;
   }
 
-    /* Custom CSS for adjusting font size */
-    .custom-font h2 {
-      font-size: 30px; /* Adjust font size for h2 */
-    }
-  
-    .custom-font h1 {
-      font-size: 42px; /* Adjust font size for h1 */
-    }
-  
-    .custom-font p {
-      font-size: 24px; /* Adjust font size for p */
-    }
-    
-    .logo-font{
-      font-size: 25px;
-    }
 
-    .fade-in {
-      opacity: 0;
-      animation: fadeInAnimation 1s ease-in forwards;
-    }
-    
-    @keyframes fadeInAnimation {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
+  .custom-font h2 {
+    font-size: 35px;
+  }
 
-    #moreAboutMe {
+  .custom-font h1 {
+    font-size: 50px;
+  }
+
+  .custom-font p {
+    font-size: 30px;
+  }
+  
+  .logo-font{
+    font-size: 25px;
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    from {
       opacity: 0;
-      visibility: hidden;
-      transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
-      color: white; /* Set initial text color to white */
-      background-color: transparent; /* Set initial background to transparent */
-      border: 1px solid white; /* Set initial border color to white */
     }
-    
-    #moreAboutMe:hover {
-      background-color: transparent; /* Set background to transparent on hover */
-      color: yellow; /* Set text color to yellow on hover */
-      border-color: yellow; /* Set border color to yellow on hover */
+    to {
+      opacity: 1;
     }
+  }
+
+  #moreAboutMe {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    color: white; 
+    background-color: transparent; 
+    border: 1px solid white; 
+  }
+  
+  #moreAboutMe:hover {
+    background-color: transparent; 
+    color: yellow; 
+    border-color: yellow; 
+  }
+  #description {
+    white-space: pre-wrap; 
+    font-size: 20px;
+  }
     
-    
-    
+  .custom-row {
+    height: 396.391px; /* Set the height to the desired value */
+  }
+
+  .bg-circle {
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    width: 400px; /* Adjust the size of the circle */
+    height: 400px; /* Adjust the size of the circle */
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust background color and opacity */
+    border-radius: 50%; /* Makes it a circle */
+    z-index: -1; /* Move it behind other elements */
+  }
+  
+  .bg-img {
+    position: relative; /* Ensure the image is positioned relative to the parent */
+  }
